@@ -27,7 +27,7 @@ a {
 }
 
 .blog-card {
-  padding: 1rem;
+  padding: 1.3rem;
   background-color: var(--blue-default)
 }
 
@@ -36,7 +36,7 @@ a {
   transition: 0.3s;
 }
 
-h3 {
+.blog-card-title {
   font-size: 1rem;
   font-weight: 400;
 }
@@ -48,7 +48,6 @@ h3 {
   max-width: 80rem;
   grid-template-columns: .7fr max-content 1fr 30rem 2fr 30rem .7fr;
   grid-template-rows: 4rem max-content max-content 3rem max-content max-content 3rem;
-
   grid-template-areas:
     ". . . . . . ."
     ". logo . . . . ."
@@ -57,7 +56,6 @@ h3 {
     ". . . intro . projects ."
     ". . . section-blog . projects ."
     ". . . . . . ."
-    /* "footer footer footer footer footer footer footer"; */
 }
 
 .logo {
@@ -99,6 +97,12 @@ h3 {
   background-color: var(--blue-default)
 }
 
+.project-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .project-card:hover {
   background-color: var(--blue-hover);
   transition: 0.3s;
@@ -107,12 +111,11 @@ h3 {
 /*media queries*/
 
 /*tablet*/
-@media screen and (max-width: 1180px) and (min-width: 601px) {
+@media screen and (max-width: 1180px) and (min-width: 671px) {
 
 .home-grid {
-  grid-template-columns: 1fr max-content 28rem 1fr; //min-max
-  grid-template-rows: 4rem max-content max-content 3rem max-content max-content 3rem 30rem max-content;
-
+  grid-template-columns: 1fr max-content 30rem 1fr; 
+  grid-template-rows: 4rem max-content max-content 3rem max-content max-content 3rem 3rem max-content 4rem;
   grid-template-areas:
   ". . . ."
   ". logo . ."
@@ -123,16 +126,20 @@ h3 {
   ". . . ."
   ". . header-projects ."
   ". . projects ."
+  ". . . ."
 }
 
+.project-card {
+  height: 15rem;
+}
 }
 
 /*mobile*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
   .home-grid {
-    margin: 2rem;
+    margin: 1.5rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 2rem max-content max-content 3rem max-content max-content 3rem max-content max-content;
+    grid-template-rows: 2rem max-content max-content 3rem max-content max-content 3rem max-content max-content 2rem;
 
     grid-template-areas:
     "."
@@ -144,6 +151,7 @@ h3 {
     "."
     "header-projects"
     "projects"
+    "."
   }
 
   .header-projects {
@@ -154,6 +162,7 @@ h3 {
     display: block;
   }
 
+  /* tidy up */
   .projects div {
     text-align: center;
     padding-top: 6rem;
