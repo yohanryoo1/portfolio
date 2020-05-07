@@ -107,11 +107,62 @@ h3 {
 /*media queries*/
 
 /*tablet*/
-@media screen and (min-width: 760px) and (max-width: ) {
+@media screen and (max-width: 1180px) and (min-width: 601px) {
+
+.home-grid {
+  grid-template-columns: 1fr max-content 28rem 1fr; //min-max
+  grid-template-rows: 4rem max-content max-content 3rem max-content max-content 3rem 30rem max-content;
+
+  grid-template-areas:
+  ". . . ."
+  ". logo . ."
+  ". name . ."
+  ". . . ."
+  ". . intro ."
+  ". . section-blog ."
+  ". . . ."
+  ". . header-projects ."
+  ". . projects ."
+}
 
 }
 
-/*desktop*/
-@media screen and (min-width: 760px) {
+/*mobile*/
+@media screen and (max-width: 600px) {
+  .home-grid {
+    margin: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2rem max-content max-content 3rem max-content max-content 3rem max-content max-content;
 
+    grid-template-areas:
+    "."
+    "logo"
+    "name"
+    "."
+    "intro"
+    "section-blog"
+    "."
+    "header-projects"
+    "projects"
+  }
+
+  .header-projects {
+    margin-bottom: 1.3rem;
+  }
+
+  .projects {
+    display: block;
+  }
+
+  .projects div {
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .projects div:hover {
+    background-color: var(--blue-hover);
+    transition: 0.3s;
+  } 
+  
 }
