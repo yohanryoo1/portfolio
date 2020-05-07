@@ -1,5 +1,7 @@
 :root {
   --background-color: #000B43;
+  --blue-default: #182462;
+  --blue-hover: #2E3A76;
   --cream: #FFFBDA;
 }
 
@@ -20,16 +22,16 @@ a {
 }
 
 .header-blog {
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
 }
 
 .blog-card {
   padding: 1rem;
-  background-color: #182462;
+  background-color: var(--blue-default)
 }
 
 .blog-card:hover {
-  background-color: #2E3A76;
+  background-color: var(--blue-hover);
   transition: 0.3s;
 }
 
@@ -43,18 +45,18 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   max-width: 80rem;
-  grid-template-columns: .7fr 12rem .1fr 30rem 2fr 30rem .7fr;
-  grid-template-rows: 3.5rem max-content max-content 3rem max-content 3rem max-content max-content;
+  grid-template-columns: .7fr max-content 1fr 30rem 2fr 30rem .7fr;
+  grid-template-rows: 5rem max-content max-content 3rem max-content max-content 3rem;
 
   grid-template-areas:
     ". . . . . . ."
     ". logo . . . . ."
     ". name . . . . ."
     ". . . . . header-projects ."
-    ". . . intro . . ."
-    ". . . section-blog . . ."
+    ". . . intro . projects ."
+    ". . . section-blog . projects ."
     ". . . . . . ."
-    "footer footer footer footer footer footer footer";
+    /* "footer footer footer footer footer footer footer"; */
 }
 
 .logo {
@@ -86,4 +88,9 @@ h3 {
 
 .section-blog {
   grid-area: section-blog
+}
+
+.projects {
+  grid-area: projects;
+  background-color: var(--blue-default)
 }
