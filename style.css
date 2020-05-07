@@ -1,0 +1,89 @@
+:root {
+  --background-color: #000B43;
+  --cream: #FFFBDA;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: var(--cream);  
+  background-color: var(--background-color);
+  font-family: 'Work Sans', sans-serif;
+}
+
+a {
+  color: inherit; 
+}
+
+.header-blog {
+  margin-bottom: 1rem;
+}
+
+.blog-card {
+  padding: 1rem;
+  background-color: #182462;
+}
+
+.blog-card:hover {
+  background-color: #2E3A76;
+  transition: 0.3s;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.home-grid {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  grid-template-columns: .7fr 12rem .1fr 30rem 2fr 30rem .7fr;
+  grid-template-rows: 3.5rem max-content max-content 3rem max-content 3rem max-content max-content;
+
+  grid-template-areas:
+    ". . . . . . ."
+    ". logo . . . . ."
+    ". name . . . . ."
+    ". . . . . header-projects ."
+    ". . . intro . . ."
+    ". . . section-blog . . ."
+    ". . . . . . ."
+    "footer footer footer footer footer footer footer";
+}
+
+.logo {
+  grid-area: logo;
+  line-height: 2rem;
+}
+
+.name {
+  grid-area: name;
+  /* font-family: 'Exo', sans-serif; */
+  /* text-transform: uppercase;
+  letter-spacing: 0.3em; */
+  font-size: 1.65rem;
+}
+
+.intro {
+  grid-area: intro;
+  line-height: 1.7rem;
+  margin-bottom: 4rem;
+}
+
+.intro p:first-child {
+  margin-bottom: 2rem;
+}
+
+.header-projects {
+  grid-area: header-projects
+}
+
+.section-blog {
+  grid-area: section-blog
+}
