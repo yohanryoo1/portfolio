@@ -92,5 +92,13 @@ h3 {
 
 .projects {
   grid-area: projects;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   background-color: var(--blue-default)
+}
+
+.project-card:hover {
+  background-color: var(--blue-hover);
+  transition: 0.3s;
 }
